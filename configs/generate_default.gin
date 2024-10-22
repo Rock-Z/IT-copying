@@ -1,0 +1,7 @@
+run_generation.generate_kwargs = {
+    "min_length": 250,
+    "max_length": 250,
+}
+run_generation.model_name = "allenai/OLMo-7B-hf"
+
+set_seed.seed = 42
