@@ -104,7 +104,7 @@ def load_model_and_tokenizer(model_kwargs : dict[str, str], tokenizer_kwargs : d
     Returns:
         AutoModelForCausalLM, AutoTokenizer: The model and tokenizer objects.
     """
-    if "model_name" not in tokenizer_kwargs:
+    if "pretrained_model_name_or_path" not in tokenizer_kwargs:
         tokenizer_kwargs["pretrained_model_name_or_path"] = model_kwargs["pretrained_model_name_or_path"]
 
     model = AutoModelForCausalLM.from_pretrained(**model_kwargs)
