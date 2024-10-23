@@ -1,7 +1,17 @@
-run_generation.generate_kwargs = {
-    "min_length": 250,
-    "max_length": 250,
-}
-run_generation.model_name = "allenai/OLMo-7B-hf"
 
+# Default model loading params
+load_model_and_tokenizer.model_kwargs = {
+    "pretrained_model_name_or_path": "allenai/OLMo-7B-hf",
+    "device_map": "auto"
+    #"attn_implementation": "flash_attention_2",
+    #"torch_dtype": "bfloat16"
+}
+
+# Default generation params
+run_generation.generate_kwargs = {
+    "min_new_tokens": 375,
+    "max_new_tokens": 375,
+}
+
+# Default random seet (for numpy and torch)
 set_seed.seed = 42
